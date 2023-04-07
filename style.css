@@ -1,5 +1,4 @@
 body {
-    border:1px solid black;
     font-family: Tahoma, Arial, sans-serif;
     background-color: white;
     display: grid;
@@ -46,7 +45,7 @@ p {
 }
  main {
     margin-bottom: 10px;
-    display:flex;
+    
     flex-direction: row;
     
 }
@@ -128,24 +127,37 @@ container-two {
    table {
         background-color: lightgray;
    }
-    
+    textarea {
+        background-color: rgb(133, 173, 208);
+    }
     
 }
 /* tablets*/
 @media screen  and (max-width:1000px){
    table {
-    background-color: lightgray;
+    background-color: lightblue;
    }
+   textarea {
+    background-color: lavender;
+}
 }
 /* mobile*/
 @media screen  and (max-width:600px){
     body {
-        display: flex;
-        flex-direction: column;
-    
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 100px auto auto;
+        grid-template-areas: 
+            "head head head"
+            "nav nav nav"
+            "aside aside aside"
+            "article article article"
+            "foot foot foot";
     }
     table {
-     background-color: lightgray;
+     background-color: lightpink;
+    }
+    textarea {
+        background-color:lemonchiffon;
     }
     body, html {
         height: 100%;
